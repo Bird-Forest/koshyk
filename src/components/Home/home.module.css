@@ -1,0 +1,7 @@
+.bg {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background-color: #9b1e1e;
+  padding: 10px;
+}
