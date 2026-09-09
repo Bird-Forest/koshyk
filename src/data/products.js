@@ -1,34 +1,29 @@
-import konstruktor1 from "../../public/konstruktor82_1.webp";
+import konstruktor1 from "../../public/konstruktor_1.webp";
 import konstruktor2 from "../../public/konstruktor_2.webp";
-import konstruktor3 from "../../public/konstruktor_3.webp";
+import { SlPresent } from "react-icons/sl";
 
 export const goodsList = [
   {
     id: 1,
     slug: "konstruktor-poezd-magnetic-82",
     name: "Магнітний конструктор-поїзд Magnetic",
-    price_old: 899,
-    price_new: 699,
+    price_old: 1200,
+    price_new: 900,
+    discount: "25%",
+    icon: <SlPresent />,
+    call: "ІДЕАЛЬНИЙ ПОДАРУНОК ДЛЯ ДИТИНИ",
     description: [
       {
         idt: "t1",
-        em: "Happy_Monkey",
         text: " Для дітей від 3 років",
       },
       {
         idt: "t2",
-        em: "Happy_Monkey",
-        text: "Загальна кількість деталей: 82 шт",
-      },
-      {
-        idt: "t3",
-        em: "Happy_Monkey",
-        text: "USB-кабель для зарядки в комплекті ",
+        text: "Розвиває уяву та творчість",
       },
     ],
     image_1: konstruktor1,
     image_2: konstruktor2,
-    image_3: konstruktor3,
   },
   {
     id: 2,
@@ -36,25 +31,24 @@ export const goodsList = [
     name: "Магнітний конструктор-поїзд Magnetic",
     price_old: 1100,
     price_new: 2000,
+    discount: "25%",
+    icon: <SlPresent />,
+    call: "ІДЕАЛЬНИЙ ПОДАРУНОК ДЛЯ ДИТИНИ",
     description: [
       {
         idt: "t1",
-        em: "Happy_Monkey",
         text: " Для дітей від 3 років",
       },
       {
         idt: "t2",
-        em: "Happy_Monkey",
-        text: "Загальна кількість деталей: 82 шт",
+        text: "Загальна кількість деталей: 132 шт",
       },
       {
         idt: "t3",
-        em: "Happy_Monkey",
         text: "USB-кабель для зарядки в комплекті ",
       },
     ],
     image_1: konstruktor1,
     image_2: konstruktor2,
-    image_3: konstruktor3,
   },
 ];
