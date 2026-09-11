@@ -1,14 +1,22 @@
+.bgBlue {
+  background-color: #2a5b9c;
+}
+.fontWhite {
+  color: #ffffff;
+}
+.fontBlue {
+  color: #2a5b9c;
+}
 .wrapItem {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: #2a5b9c;
   min-width: 320px;
   max-width: 480px;
   height: auto;
   gap: 4px;
-  padding: 2px 0;
+  padding: 60px 2px;
 }
 
 .wrapImg {
@@ -47,7 +55,7 @@
 .discount {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }
@@ -61,6 +69,20 @@
   border-radius: 8px;
   backdrop-filter: blur(7px);
   padding: 4px;
+}
+.discount > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-montserrat);
+  font-size: 40px;
+  font-weight: 800;
+  font-style: italic;
+  width: 120px;
+  height: 120px;
+  color: #ff2f00;
+  border-radius: 50%;
+  backdrop-filter: blur(7px);
 }
 .value {
   display: flex;
@@ -77,7 +99,6 @@
   backdrop-filter: blur(7px);
   padding: 4px;
 }
-
 .noteList {
   display: flex;
   flex-direction: column;
@@ -86,20 +107,17 @@
   width: 100%;
   gap: 8px;
 }
-
 .wrapNote {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   border-radius: 8px;
-  background-color: #2a5b9c;
 }
 .noteTitle {
   font-family: var(--font-open-sans);
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
-  color: white;
   padding: 8px;
 }
 .note {
@@ -107,7 +125,6 @@
   font-size: 14px;
   font-weight: 600;
   font-style: italic;
-  color: white;
   padding: 4px 8px;
 }
 .wrapCall {
@@ -116,9 +133,8 @@
   align-items: center;
   width: 100%;
   height: auto;
-  gap: 4px;
-  color: white;
-  padding: 8px;
+  gap: 10px;
+  padding: 4px;
 }
 .icon {
   font-size: 36px;
@@ -126,7 +142,24 @@
 }
 .call {
   font-family: var(--font-montserrat);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
+  letter-spacing: 1.25;
+}
+.btnOrder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 380px;
+  height: 48px;
+  /* color: #2a5b9c; */
+  background-color: white;
+  font-family: var(--font-montserrat);
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1.5;
+  border-radius: 20px;
 }

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import styles from "./item.module.css";
-import { goodsList } from "@/data/products";
+import styles from "./first.module.css";
+import { allProducts } from "@/data/products";
 
-export default function Produkt({ slug }) {
-  const item = goodsList.find((el) => el.slug === slug);
+export default function SecondTemplateCard({ slug }) {
+  const item = allProducts.find((el) => el.slug === slug);
 
   if (!item) {
     return <div>Товар не знайдено</div>;

@@ -1,20 +1,22 @@
 import React from "react";
 import styles from "./goods.module.css";
-import { goodsList } from "@/data/products";
+import { allProducts } from "@/data/products";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function GoodsList() {
+export default function GoodsLists() {
   return (
     <div className={styles.goodsWrap}>
       <ul className={styles.wrapList}>
-        {goodsList.map((item) => (
+        {allProducts.map((item) => (
           <li key={item.id} className={styles.goodsItem}>
             <Link href={`/${item.slug}`} className={styles.goodsItem}>
               <Image
                 alt={item.name}
                 src={item.image_1}
-                // quality={100}
+                width={480}
+                height={480}
+                loading="eager"
                 className={styles.img}
               />
             </Link>
