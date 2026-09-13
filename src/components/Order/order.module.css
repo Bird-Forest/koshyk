@@ -6,16 +6,19 @@
   min-width: 320px;
   max-width: 100%;
   height: auto;
-  gap: 24px;
-  padding: 20px 4px;
+  gap: 16px;
+  padding: 40px 4px;
 }
-.form > p {
-  font-family: var(--font-montserrat);
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1.25;
-  color: white;
+
+.boxInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
 }
+
 .inputText {
   display: flex;
   justify-content: flex-start;
@@ -31,9 +34,19 @@
   letter-spacing: 1.25;
   text-align: left;
   border: 2px solid white;
-  padding: 0 6px;
+  padding: 0 8px;
 }
-.boxRadio {
+
+.titleBox {
+  font-family: var(--font-montserrat);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.25;
+  color: white;
+  padding-bottom: 8px;
+}
+
+.listRadio {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -41,7 +54,7 @@
   height: auto;
   list-style: none;
 }
-.wrapRadio {
+.itemRadio {
   position: relative;
   display: flex;
   justify-content: center;
@@ -56,7 +69,6 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  /* background-color: white; */
   background-size: cover;
   outline: none;
 }
@@ -76,13 +88,19 @@
   border: 3px solid white;
 }
 
+.error {
+  height: 18px;
+  font-family: var(--font-open-sans);
+  font-size: 16px;
+  font-weight: 500;
+  color: #ff6f00;
+}
 .btnSubmit {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 48px;
-  /* color: #2a5b9c; */
   background-color: white;
   font-family: var(--font-montserrat);
   font-size: 24px;

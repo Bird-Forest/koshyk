@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./first.module.css";
 import OrderForm from "../Order/OrderForm";
 import { useState } from "react";
+import UserForm from "../Order/UserForm";
 
 export default function FirstTemplateCard({ item }) {
   const [open, setOpen] = useState(false);
@@ -99,7 +100,8 @@ export default function FirstTemplateCard({ item }) {
       >
         Пропозиція обмежена*
       </p>
-      {open && <OrderForm item={item} />}
+      {/* {open && <OrderForm item={item} />} */}
+      {open && <UserForm item={item} />}
     </div>
   );
 }

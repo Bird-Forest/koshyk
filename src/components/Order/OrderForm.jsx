@@ -75,7 +75,7 @@ export default function OrderForm({ item }) {
             </li>
           ))}
         </ul>
-        <p>оберіть спосіб зв&#699;язку</p>
+        <p>оберіть спосіб зв&#699;язку </p>
         <input
           type="text"
           name="name"
@@ -106,3 +106,5 @@ export default function OrderForm({ item }) {
     </div>
   );
 }
+
+// оберіть спосіб зв&#699;язку

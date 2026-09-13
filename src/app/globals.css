@@ -52,3 +52,9 @@ input,
 textarea {
   outline: none;
 }
+
+@font-face {
+  font-family: "ThankYouFont";
+  src: url("/font/GreatVibes-Regular.woff2") format("woff2");
+  font-display: swap;
+}

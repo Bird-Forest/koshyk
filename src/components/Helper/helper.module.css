@@ -1,0 +1,77 @@
+.spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #92929d;
+  box-shadow:
+    32px 0 #92929d,
+    -32px 0 #92929d;
+  position: relative;
+  animation: flash 0.5s ease-out infinite alternate;
+}
+/* Component Gratitude */
+.thankWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  gap: 20px;
+}
+.thankBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+}
+.thankImg {
+  display: flex;
+  min-width: 320px;
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+}
+.thankTitle {
+  position: absolute;
+  bottom: 0;
+  right: 28px;
+  display: flex;
+  font-family: "ThankYouFont", cursive, sans-serif;
+  font-size: 60px;
+  color: #472c05;
+}
+.thinkText {
+  display: flex;
+  font-family: var(--font-montserrat);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.25;
+  text-align: center;
+  color: #472c05;
+  padding: 8px;
+}
+/* Component NotFound */
+.notFoundBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  padding: 8px;
+}
+.notFoundBox > h4 {
+  display: flex;
+  font-family: "ThankYouFont", cursive, sans-serif;
+  font-size: 54px;
+  color: #472c05;
+  text-align: center;
+  padding: 8px;
+}
