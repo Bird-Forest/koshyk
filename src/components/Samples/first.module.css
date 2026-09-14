@@ -154,7 +154,6 @@
   width: 90%;
   max-width: 380px;
   height: 48px;
-  /* color: #2a5b9c; */
   background-color: white;
   font-family: var(--font-montserrat);
   font-size: 24px;
@@ -162,4 +161,10 @@
   text-align: center;
   letter-spacing: 1.5;
   border-radius: 20px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.btnOrder:hover {
+  /* Увеличивает кнопку на 5% (1.05 от исходного размера) */
+  transform: scale(1.05);
 }

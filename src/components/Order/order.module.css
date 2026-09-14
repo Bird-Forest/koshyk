@@ -110,4 +110,10 @@
   border-radius: 20px;
   outline: transparent;
   border: 2px solid white;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.btnSubmit:hover {
+  /* Увеличивает кнопку на 10% (1.1 от исходного размера) */
+  transform: scale(1.05);
 }

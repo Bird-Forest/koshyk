@@ -28,7 +28,7 @@ export default function UserForm({ item }) {
   });
 
   const myFunction = () => {
-    router.push(`${item.slug}/than`);
+    router.push(`${item.slug}/thanks`);
   };
 
   return (

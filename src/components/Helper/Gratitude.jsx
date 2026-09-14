@@ -13,11 +13,12 @@ export default function Gratitude() {
           width={280}
           height={280}
           loading="eager"
+          className={styles.emojiImg}
         />
         <h4 className={styles.thankTitle}>Дякуєм!</h4>
       </div>
       <p className={styles.thinkText}>
-        Найближчим часом ми з Вами звʼяжемося через вказаний месенджер
+        найближчим часом ми з Вами звʼяжемося через вказаний месенджер
       </p>
     </div>
   );

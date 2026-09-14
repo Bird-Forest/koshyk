@@ -13,7 +13,7 @@ export default function NotFoundPage() {
           width={280}
           height={280}
           loading="eager"
-          className={styles.thankImg}
+          className={styles.emojiImg}
         />
       </div>
       <h4>Сторінку не знайдено</h4>

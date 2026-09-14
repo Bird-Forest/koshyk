@@ -21,7 +21,7 @@ export default async function ProduktPage({ params }) {
   // console.log(productSlug);
   // 1. Находим товар в общем массиве
   const product = allProducts.find((item) => item.slug === productSlug);
-  console.log(product);
+  // console.log(product);
 
   // if (!product) {
   //   return <div>Товар не знайдено</div>;
