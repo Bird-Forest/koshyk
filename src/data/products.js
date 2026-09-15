@@ -32,12 +32,12 @@ export const allProducts = [
   },
   {
     id: 101002,
-    template: 1,
+    template: 2,
     slug: "pristavnoj-stolik-na-kolesikax-kompyuternyj",
     name: "Приставний столик на колесиках G-50",
     price_old: 1000,
-    price_new: 700,
-    discount: "30%",
+    price_new: 750,
+    discount: "25%",
     icon: <FaThumbsUp />,
     call: "ПРОСТО НЕОБХІДНА РІЧ!",
     description: [
@@ -51,10 +51,22 @@ export const allProducts = [
       },
       {
         idt: "t3",
-        text: "Сучасний лаконічний дизайн",
+        text: "Розмір стільниці 30х50",
       },
     ],
-    image_1: "/furniture/7470490522_stolik-g-50-tags.webp",
+    select: [
+      {
+        color: "білий",
+        fill: "#ffffff",
+        img: "/furniture/stolik-g-50-white.webp",
+      },
+      {
+        color: "чорний",
+        fill: "#000000",
+        img: "/furniture/stolik-g-50-black.webp",
+      },
+    ],
+    image_1: "/furniture/stolik-g-50-w-tags.webp",
     image_2: "/furniture/stolik-g-50.webp",
     primary: "#917f6c",
     secondary: "#ffffff",
@@ -88,33 +100,4 @@ export const allProducts = [
     primary: "#393736",
     secondary: "#ffffff",
   },
-  // {
-  //   id: 102004,
-  //   template: 2,
-  //   slug: "konstruktor-poezd-magnetic-132",
-  //   name: "Магнітний конструктор-поїзд Magnetic",
-  //   price_old: 2100,
-  //   price_new: 1600,
-  //   discount: "25%",
-  //   icon: <SlPresent />,
-  //   call: "ІДЕАЛЬНИЙ ПОДАРУНОК ДЛЯ ДИТИНИ",
-  //   description: [
-  //     {
-  //       idt: "t1",
-  //       text: " Для дітей від 3 років",
-  //     },
-  //     {
-  //       idt: "t2",
-  //       text: "Загальна кількість деталей: 132 шт",
-  //     },
-  //     {
-  //       idt: "t3",
-  //       text: "USB-кабель для зарядки в комплекті ",
-  //     },
-  //   ],
-  //   image_1: "/konstruktor/konstruktor_1.webp",
-  //   image_2: "/konstruktor/konstruktor_2.webp",
-  //   primary: "#393736",
-  //   secondary: "#ffffff",
-  // },
 ];

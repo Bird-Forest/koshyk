@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import styles from "./first.module.css";
-import OrderForm from "../Order/OrderForm";
+import styles from "./samples.module.css";
 import { useState } from "react";
 import UserForm from "../Order/UserForm";
 
@@ -12,13 +11,12 @@ export default function FirstTemplateCard({ item }) {
   const openForm = () => {
     setOpen(true);
   };
-  const closeForm = () => {
-    setOpen(false);
-  };
+  // const closeForm = () => {
+  //   setOpen(false);
+  // };
 
   return (
     <div
-      // className={`${styles.wrapItem} ${styles.bgBlue}`}
       className={styles.wrapItem}
       style={{ backgroundColor: `${item.primary}` }}
     >
@@ -50,12 +48,10 @@ export default function FirstTemplateCard({ item }) {
             {item.description.map((el) => (
               <li
                 key={el.idt}
-                // className={`${styles.wrapNote} ${styles.bgBlue}`}
                 className={styles.wrapNote}
                 style={{ backgroundColor: `${item.primary}` }}
               >
                 <p
-                  // className={`${styles.note} ${styles.fontWhite}`}
                   className={styles.note}
                   style={{ color: `${item.secondary}` }}
                 >
@@ -67,20 +63,12 @@ export default function FirstTemplateCard({ item }) {
         </div>
       </div>
       <div className={styles.wrapNotes}>
-        <h4
-          // className={`${styles.noteTitle} ${styles.fontWhite}`}
-          className={styles.noteTitle}
-          style={{ color: `${item.secondary}` }}
-        >
+        <h4 className={styles.noteTitle} style={{ color: `${item.secondary}` }}>
           Встигни придбати за ціною
         </h4>
         <p className={styles.value}>{item.price_new}грн</p>
       </div>
-      <div
-        // className={`${styles.wrapCall} ${styles.fontWhite}`}
-        className={styles.wrapCall}
-        style={{ color: `${item.secondary}` }}
-      >
+      <div className={styles.wrapCall} style={{ color: `${item.secondary}` }}>
         <span className={styles.icon}>{item.icon}</span>
         <h4 className={styles.call}>{item.call}</h4>
       </div>
@@ -93,14 +81,9 @@ export default function FirstTemplateCard({ item }) {
       >
         Замовити
       </a>
-      <p
-        // className={`${styles.note} ${styles.fontWhite}`}
-        className={styles.note}
-        style={{ color: `${item.secondary}` }}
-      >
+      <p className={styles.note} style={{ color: `${item.secondary}` }}>
         Пропозиція обмежена*
       </p>
-      {/* {open && <OrderForm item={item} />} */}
       {open && <UserForm item={item} />}
     </div>
   );

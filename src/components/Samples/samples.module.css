@@ -1,12 +1,3 @@
-.bgBlue {
-  background-color: #2a5b9c;
-}
-.fontWhite {
-  color: #ffffff;
-}
-.fontBlue {
-  color: #2a5b9c;
-}
 .wrapItem {
   display: flex;
   flex-direction: column;
@@ -14,6 +5,7 @@
   justify-content: flex-start;
   min-width: 320px;
   max-width: 480px;
+  width: 100%;
   height: auto;
   gap: 4px;
   padding: 60px 2px;
@@ -127,6 +119,54 @@
   font-style: italic;
   padding: 8px;
 }
+.slidesBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 8px;
+}
+.selectList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.selectWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.selectInput {
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  outline: none;
+  cursor: pointer;
+}
+.selectInput:checked {
+  border: 2px solid #ff2f00;
+}
+.slidesWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.wrapper {
+  display: block;
+  width: 280px;
+  height: auto;
+  margin: auto;
+}
+.wrapperNone {
+  display: none;
+}
 .wrapCall {
   display: flex;
   justify-content: center;
@@ -165,6 +205,5 @@
   cursor: pointer;
 }
 .btnOrder:hover {
-  /* Увеличивает кнопку на 5% (1.05 от исходного размера) */
   transform: scale(1.05);
 }

@@ -1,4 +1,3 @@
-// import { Geist, Geist_Mono } from "next/font/google";
 import { Montserrat, Open_Sans } from "next/font/google";
 import "./globals.css";
 

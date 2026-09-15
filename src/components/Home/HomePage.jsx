@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./home.module.css";
-import GoodsLists from "../Goods/GoodsLists";
+import styles from "./goods.module.css";
+import GoodsLists from "./GoodsLists";
 
 export default function HomePage() {
   return (
-    <div className={styles.bg}>
+    <div className={styles.goodsWrap}>
       <GoodsLists />
     </div>
   );

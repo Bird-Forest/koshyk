@@ -15,16 +15,6 @@ const messengers = [
 export default function OrderForm({ item }) {
   const [loading, setLoading] = useState(false);
 
-  // const validationSchema = Yup.object({
-  //   name: Yup.string().trim().min(3).required("має бути не менше 3 символів"),
-  //   phone: Yup.string()
-  //     .matches(regexp, "10 цифр, починаючи з 0")
-  //     .required("не вірно вказаний номер телефону"),
-  //   messenger: Yup.array()
-  //     .of(Yup.string())
-  //     .min(1, "оберіть мессенджер для зв'язку"),
-  // });
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);

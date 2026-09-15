@@ -91,9 +91,10 @@
 .error {
   height: 18px;
   font-family: var(--font-open-sans);
+  letter-spacing: 1.25;
   font-size: 16px;
-  font-weight: 500;
-  color: #ff6f00;
+  font-weight: 600;
+  color: #a02803;
 }
 .btnSubmit {
   display: flex;

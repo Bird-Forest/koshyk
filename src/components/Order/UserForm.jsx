@@ -2,7 +2,6 @@
 import React from "react";
 // import { useState } from "react";
 import styles from "./order.module.css";
-// import { redirect } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { scheme } from "@/constants/schemeUser";
@@ -17,7 +16,7 @@ const messengers = [
   { id: 1, value: " Whatsapp", bgClass: styles.whatsapp },
 ];
 
-export default function UserForm({ item }) {
+export default function UserForm({ item, selectedColor }) {
   const router = useRouter();
   const {
     register,
@@ -27,13 +26,22 @@ export default function UserForm({ item }) {
     resolver: yupResolver(scheme),
   });
 
-  const myFunction = () => {
-    router.push(`${item.slug}/thanks`);
+  const colorProduct = item.select ? selectedColor : " ";
+  console.log(colorProduct);
+  const product = {
+    productId: item.id,
+    productName: item.name,
+    price: item.price_new,
+    color: colorProduct,
   };
 
   return (
     <form
-      onSubmit={handleSubmit((data) => console.log("USER", data))}
+      onSubmit={handleSubmit(async (data) => {
+        const order = { ...data, product };
+        console.log("USER", order);
+        router.push(`${item.slug}/thanks`);
+      })}
       id="order-form"
       className={styles.form}
     >
@@ -56,21 +64,14 @@ export default function UserForm({ item }) {
         register={register}
         errors={errors}
       />
-      {/* <button
+      <button
         type="submit"
-        disabled={isSubmitting || !isDirty || !isValid}
+        // isSubmitting={isSubmitting}
+        // disabled={isSubmitting}
         className={styles.btnSubmit}
         style={{ color: `${item.primary}` }}
       >
         {isSubmitting ? <Spinner /> : "Я це хочу"}
-      </button> */}
-      <button
-        type="button"
-        onClick={myFunction}
-        className={styles.btnSubmit}
-        style={{ color: `${item.primary}` }}
-      >
-        THANKS
       </button>
     </form>
   );

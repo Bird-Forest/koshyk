@@ -31,8 +31,6 @@
 }
 .emojiImg {
   display: flex;
-  /* min-width: 320px;
-  max-width: 480px; */
   width: 280px;
   height: auto;
 }

@@ -3,9 +3,9 @@ import styles from "./header.module.css";
 import logo from "../../../public/icons/logo.webp";
 import Image from "next/image";
 
-export default function HeaderLanding() {
+export default function HeaderMain() {
   return (
-    <header className={styles.header}>
+    <header className={styles.headerMain}>
       <Image alt="logo" src={logo} className={styles.imgLogo} />
       <p className={styles.title}>онлайн-кошик</p>
     </header>

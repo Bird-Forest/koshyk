@@ -1,8 +1,8 @@
 .goodsWrap {
-  position: relative;
   display: flex;
   width: 100%;
   height: auto;
+  padding: 60px 10px;
 }
 
 .wrapList {
@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   width: 100%;
   height: auto;
-  gap: 8px;
+  gap: 16px;
   padding: 10px;
 }
 .goodsItem {
