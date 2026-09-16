@@ -226,3 +226,6 @@
 .btnOrder:hover {
   transform: scale(1.05);
 }
+.any {
+  display: block;
+}

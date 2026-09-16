@@ -74,7 +74,7 @@ export const allProducts = [
   {
     id: 102003,
     template: 1,
-    slug: "dvojnaya-veshalka-s-kryuchkami",
+    slug: "dvojnaya-veshalka-dlya-odygu",
     name: "Підлогова вішалка-стійка для одягу",
     price: "1200 грн",
     price_new: "720 грн",
@@ -95,7 +95,7 @@ export const allProducts = [
         text: "Висота-164см, ширина-137см, глибина-26см ",
       },
     ],
-    image_1: "/furniture/veshalka-stojka-tags.webp",
+    image_1: "/furniture/veshalka-tags.webp",
     image_2: "/furniture/veshalka-stojka.webp",
     primary: "#393736",
     secondary: "#ffffff",
