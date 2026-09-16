@@ -3,7 +3,7 @@ export const schemeFirst = {
   template: 2,
   slug: "konstruktor-poezd-magnetic-82",
   name: "Магнітний конструктор-поїзд Magnetic",
-  price_old: 1200,
+  price: 1200,
   price_new: 900,
   discount: "25%",
   icon: "",

@@ -10,13 +10,32 @@
   gap: 4px;
   padding: 60px 2px;
 }
-
 .wrapImg {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: auto;
+}
+.boxPrice {
+  right: 0;
+  bottom: 48px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding: 12px 16px 12px 24px;
+}
+.boxPrice > h3 {
+  font-family: var(--font-montserrat);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 1.25;
+  font-style: italic;
+  color: #ffffff;
 }
 .imgBasic {
   display: flex;

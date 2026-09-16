@@ -34,6 +34,12 @@ export default function FirstTemplateCard({ item }) {
           loading="eager"
           className={styles.imgBasic}
         />
+        <div
+          className={styles.boxPrice}
+          style={{ backgroundColor: `${item.primary}` }}
+        >
+          <h3>{item.price}</h3>
+        </div>
       </div>
       <div className={styles.wrapNotes}>
         <Image
@@ -116,7 +122,7 @@ export default function FirstTemplateCard({ item }) {
         <h4 className={styles.noteTitle} style={{ color: `${item.secondary}` }}>
           Встигни придбати за ціною
         </h4>
-        <p className={styles.value}>{item.price_new}грн</p>
+        <p className={styles.value}>{item.price_new}</p>
       </div>
       <div className={styles.wrapCall} style={{ color: `${item.secondary}` }}>
         <span className={styles.icon}>{item.icon}</span>
