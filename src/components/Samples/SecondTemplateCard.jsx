@@ -9,6 +9,17 @@ export default function FirstTemplateCard({ item }) {
   const [open, setOpen] = useState(false);
   const [selectedColor, setSelectedColor] = useState("білий");
 
+  const nameProperty = (arr) => {
+    const property = arr.find((el) => el.value === selectedColor);
+    return property ? property.name : null;
+  };
+  const currentName = nameProperty(item.select);
+
+  const property = {
+    name: currentName,
+    value: selectedColor,
+  };
+
   const onChangeColor = (e) => {
     setSelectedColor(e.target.value);
   };
@@ -80,13 +91,13 @@ export default function FirstTemplateCard({ item }) {
         </h4>
         <ul className={styles.selectList}>
           {item.select.map((el) => {
-            const isSelected = selectedColor === el.color;
+            const isSelected = selectedColor === el.value;
             return (
               <li key={el.fill} className={styles.selectWrap}>
                 <input
                   type="radio"
                   name="slider"
-                  value={el.color}
+                  value={el.value}
                   checked={isSelected}
                   onChange={onChangeColor}
                   className={styles.selectInput}
@@ -98,7 +109,7 @@ export default function FirstTemplateCard({ item }) {
         </ul>
         <ul className={styles.slidesWrap}>
           {item.select.map((el) => {
-            const isSelected = selectedColor === el.color;
+            const isSelected = selectedColor === el.value;
             return (
               <li
                 key={el.fill}
@@ -107,7 +118,7 @@ export default function FirstTemplateCard({ item }) {
                 }
               >
                 <Image
-                  alt={el.color}
+                  alt={el.name}
                   src={el.img}
                   width={280}
                   height={280}
@@ -139,7 +150,13 @@ export default function FirstTemplateCard({ item }) {
       <p className={styles.note} style={{ color: `${item.secondary}` }}>
         Пропозиція обмежена*
       </p>
-      {open && <UserForm item={item} selectedColor={selectedColor} />}
+      {open && (
+        <UserForm
+          item={item}
+          selectedColor={selectedColor}
+          property={property}
+        />
+      )}
     </div>
   );
 }

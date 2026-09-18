@@ -1,8 +1,12 @@
 export const schemeFirst = {
   id: 101001,
   template: 1,
+  category: {
+    name: "",
+    parent_id: 2,
+  },
   slug: "konstruktor-poezd-magnetic-82",
-  name: "Магнітний конструктор-поїзд Magnetic",
+  name: "Магнітний конструктор-поїзд Magnetic 82 деталі",
   price: 1200,
   price_new: 900,
   discount: "25%",

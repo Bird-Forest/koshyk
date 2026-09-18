@@ -6,8 +6,12 @@ import { BsHouseHeart } from "react-icons/bs";
 
 export const allProducts = [
   {
-    id: 101001,
+    id: 1,
     template: 1,
+    category: {
+      name: "Дитячі товари",
+      parent_id: 1,
+    },
     slug: "konstruktor-poezd-magnetic-82",
     name: "Магнітний конструктор-поїзд Magnetic",
     price: "1200 грн",
@@ -31,8 +35,12 @@ export const allProducts = [
     secondary: "#ffffff",
   },
   {
-    id: 101002,
+    id: 2,
     template: 2,
+    category: {
+      name: "Меблі",
+      parent_id: 2,
+    },
     slug: "pristavnoj-stolik-na-kolesikax-kompyuternyj",
     name: "Приставний столик на колесиках G-50",
     price: "1000 грн",
@@ -56,12 +64,14 @@ export const allProducts = [
     ],
     select: [
       {
-        color: "білий",
+        name: "Color",
+        value: "білий",
         fill: "#ffffff",
         img: "/furniture/stolik-g-50-white.webp",
       },
       {
-        color: "чорний",
+        name: "Color",
+        value: "чорний",
         fill: "#000000",
         img: "/furniture/stolik-g-50-black.webp",
       },
@@ -72,8 +82,12 @@ export const allProducts = [
     secondary: "#ffffff",
   },
   {
-    id: 102003,
+    id: 3,
     template: 1,
+    category: {
+      name: "Меблі",
+      parent_id: 2,
+    },
     slug: "dvojnaya-veshalka-dlya-odygu",
     name: "Підлогова вішалка-стійка для одягу",
     price: "1200 грн",

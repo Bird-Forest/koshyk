@@ -16,8 +16,9 @@ const messengers = [
   { id: 1, value: " Whatsapp", bgClass: styles.whatsapp },
 ];
 
-export default function UserForm({ item, selectedColor }) {
+export default function UserForm({ item, property }) {
   const router = useRouter();
+  // const id = crypto.randomUUID();
   const {
     register,
     handleSubmit,
@@ -26,19 +27,37 @@ export default function UserForm({ item, selectedColor }) {
     resolver: yupResolver(scheme),
   });
 
-  const colorProduct = item.select ? selectedColor : " ";
-  console.log(colorProduct);
+  // const colorProduct = item.select ? selectedColor : "";
+  // console.log(colorProduct);
+  const parentId = item.category?.parent_id;
   const product = {
+    category_id: parentId,
     productId: item.id,
-    productName: item.name,
-    price: item.price_new,
-    color: colorProduct,
+    name: item.name,
+    purchased_price: item.price_new,
+    quantity: 1,
+    properties: [
+      {
+        name: property.name,
+        value: property.value,
+      },
+    ],
   };
 
   return (
     <form
       onSubmit={handleSubmit(async (data) => {
-        const order = { ...data, product };
+        const order = {
+          source_id: 1,
+          source_uuid: crypto.randomUUID(),
+          buyer_comment: data.messenger,
+          buyer: {
+            full_name: `${data.name + " " + data.surname}`,
+
+            phone: `${"+38" + data.phone}`,
+          },
+          products: [product],
+        };
         console.log("USER", order);
         router.push(`${item.slug}/thanks`);
       })}
@@ -53,8 +72,14 @@ export default function UserForm({ item, selectedColor }) {
         errors={errors}
       />
       <InputText
-        name="user"
+        name="name"
         placeholder="Ваше ім'я"
+        register={register}
+        errors={errors}
+      />
+      <InputText
+        name="surname"
+        placeholder="Ваше прізвище"
         register={register}
         errors={errors}
       />

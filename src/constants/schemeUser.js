@@ -1,7 +1,11 @@
 import * as Yup from "yup";
 
 export const scheme = Yup.object({
-  user: Yup.string()
+  name: Yup.string()
+    .min(3, "мінімум три символи")
+    .trim()
+    .required("поле обов'язкове"),
+  surname: Yup.string()
     .min(3, "мінімум три символи")
     .trim()
     .required("поле обов'язкове"),
